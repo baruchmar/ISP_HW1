@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 			c++;
 		}
 	}
-	printf("The amount of burnt trees is: %d\n", count);
+	printf("The amount of burt trees is: %d\n", count);
 	
 	return count;
 }
