@@ -16,7 +16,7 @@ Processes
 int main() {
 
 
-
-
+	printf("Hello World %d\n", NUM_OF_TREES);
+	
 	return 0;
 }
