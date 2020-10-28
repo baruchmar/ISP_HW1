@@ -13,10 +13,20 @@ Processes
 #include <stdlib.h> /* for exit() */
 
 #include "HardCodedData.h"
-int main() {
+int main(int argc, char** argv) {
+	int i, c = 0, count = 0;
 
+	// Based off of code from https://www.programmingsimplified.com/c-program-find-characters-frequency
+	while (argv[1][c] != '\0') {
+		/** Considering characters 'F' only and ignoring others. */
 
-	printf("Hello World %d\n", NUM_OF_TREES);
+		if (argv[1][c] == 'F') {
+			count++;
+		}
+		c++;
+	}
+
+	printf("The amount of burnt trees is: %d\n", count);
 	
-	return 0;
+	return count;
 }
