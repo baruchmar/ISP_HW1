@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HardCodedData.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>

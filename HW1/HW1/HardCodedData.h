@@ -1,1 +1,8 @@
-#pragma once
+#ifndef HARD_CODED_DATA
+#define HARD_CODED_DATA
+
+#define NUM_OF_STUDENTS 5
+
+
+
+#endif // HARD_CODED_DATA
