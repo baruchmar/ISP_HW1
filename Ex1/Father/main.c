@@ -120,8 +120,11 @@ int main(int argc, char** argv) {
 	FILE* p_input_file, * p_output_file;
 	long dim = 0, gen = 0;
 	int i, burnt_trees =0;
-
-	errno_t err = fopen_s(&p_input_file, "myinput.txt", "r");//TODO Change to ARGV!!!
+	if (argc <= 1) {
+		printf("No File loaded in Command Line\n");
+		exit(1);
+	}
+	errno_t err = fopen_s(&p_input_file, argv[1], "r");
 	if (err) {
 		printf("Error Opening Input File!!\n");
 		exit(1);
