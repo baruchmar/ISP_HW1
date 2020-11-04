@@ -139,7 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="create_process.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="mem_handle.c" />
+    <ClCompile Include="next_gen.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="create_process.h" />
+    <ClInclude Include="mem_handle.h" />
+    <ClInclude Include="next_gen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
