@@ -27,7 +27,8 @@ char** make_matrix(const int dim, FILE* p_input_file, char* son_str) {
 	int i, j, m = 0;
 	char** matrix;
 	matrix = malloc_matrix(dim);
-
+	son_str[m] = ' ';
+	m++;
 	for (i = 0; i < dim; i++) {
 		for (j = 0; j < dim; j++) {
 			int ch = fgetc(p_input_file);

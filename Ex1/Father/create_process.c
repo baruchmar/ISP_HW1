@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <windows.h>
+#include <string.h>
+
 
 #include "create_process.h"
 
 // Based off of recitation 3
 long create_process_simple_main(char *son_str) {
+	PROCESS_INFORMATION proc_info;
 	DWORD				waitcode;
 	DWORD				exitcode;
 	BOOL				ret_val;
-	LPTSTR				command = "TTFFGGTTTGG" ;
-	PROCESS_INFORMATION proc_info;
-	ret_val = create_process_simple(command, &proc_info);
+	TCHAR				command[] = ("..\\Debug\\Son.exe");			
+
+	ret_val = create_process_simple(command, &proc_info, son_str);
 	if (ret_val == 0) {
 		printf("Process creation failed !\n");
 		return 1;
@@ -19,11 +22,11 @@ long create_process_simple_main(char *son_str) {
 	GetExitCodeProcess(proc_info.hProcess, &exitcode);
 	return (long)exitcode;
 }
-BOOL create_process_simple(LPTSTR command_line, PROCESS_INFORMATION *p_info) {
+BOOL create_process_simple(LPTSTR command_line, PROCESS_INFORMATION *p_info, TCHAR *son_str) {
 	STARTUPINFO start_info = { sizeof(STARTUPINFO), NULL, 0 };
 	return CreateProcess(
-		"C:\\Users\\onerb\\Desktop\\University\\Year 4\\ISP_HW1\\Ex1\\Debug\\Son.exe", /*  No module name (use command line). */
-		command_line,			/*  Command line. */
+		command_line, /*  No module name (use command line). */
+		son_str,			/*  Command line. */
 		NULL,					/*  Process handle not inheritable. */
 		NULL,					/*  Thread handle not inheritable. */
 		FALSE,					/*  Set handle inheritance to FALSE. */

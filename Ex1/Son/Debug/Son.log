@@ -1,3 +1,2 @@
 ﻿  main.c
-C:\Projects\ISP_HW1\Ex1\Son\main.c(16,6): warning C4101: 'i': unreferenced local variable
   Son.vcxproj -> C:\Projects\ISP_HW1\Ex1\Debug\Son.exe

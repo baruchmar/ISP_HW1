@@ -13,7 +13,7 @@ Son
 #include <stdlib.h> /* for exit() */
 
 int main(int argc, char** argv) {
-	int i, c = 0, count = 0;
+	int c = 0, count = 0;
 
 	// Based off of code from https://www.programmingsimplified.com/c-program-find-characters-frequency
 	if (argc > 1) {
@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 			c++;
 		}
 	}
-	printf("The amount of burnt trees is: %d\n", count);
+	//printf("The amount of burnt trees is: %d\n", count);
 
 	return count;
 }

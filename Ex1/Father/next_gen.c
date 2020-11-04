@@ -30,7 +30,8 @@ int check_four_corners(int dim, char** mat_gen_zero, char** next_gen_matrix, int
 char** evaluate_generation(char** mat_gen_zero, int dim, char* son_str) {
 	int i, j, m = 0;
 	char** next_gen_matrix;
-
+	son_str[m] = ' ';
+	m++;
 	next_gen_matrix = malloc_matrix(dim);
 	for (i = 0; i < dim; i++) {
 		for (j = 0; j < dim; j++) {

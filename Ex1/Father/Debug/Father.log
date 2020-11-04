@@ -1,4 +1,2 @@
-﻿  create_process.c
-C:\Users\onerb\Desktop\University\Year 4\ISP_HW1\Ex1\Father\create_process.c(11,1): warning C4133: 'initializing': incompatible types - from 'char [12]' to 'LPTSTR'
-C:\Users\onerb\Desktop\University\Year 4\ISP_HW1\Ex1\Father\create_process.c(25,80): warning C4133: 'function': incompatible types - from 'char [67]' to 'LPCWSTR'
-  Father.vcxproj -> C:\Users\onerb\Desktop\University\Year 4\ISP_HW1\Ex1\Debug\Father.exe
+﻿  main.c
+  Father.vcxproj -> C:\Projects\ISP_HW1\Ex1\Debug\Father.exe
