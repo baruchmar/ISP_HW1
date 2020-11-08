@@ -20,6 +20,8 @@ long create_process_simple_main(char *son_str) {
 	}
 	waitcode = WaitForSingleObject(proc_info.hProcess, 5000);
 	GetExitCodeProcess(proc_info.hProcess, &exitcode);
+	CloseHandle(proc_info.hProcess); /* Closing the handle to the process */
+	CloseHandle(proc_info.hThread); /* Closing the handle to the main thread of the process */
 	return (long)exitcode;
 }
 BOOL create_process_simple(LPTSTR command_line, PROCESS_INFORMATION *p_info, TCHAR *son_str) {
