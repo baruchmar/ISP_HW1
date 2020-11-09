@@ -37,5 +37,6 @@ char** make_matrix(const int dim, FILE* p_input_file, char* son_str);
               this denotes the dimension of the square matrix we want to free.
               mat: char**
               a dimXdim matrix. 
+*/
 void free_mat(char** mat, const int dim);
 #endif // !MEM_HANDLE

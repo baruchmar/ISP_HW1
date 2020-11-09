@@ -79,7 +79,7 @@ char** evaluate_generation(char** mat_gen_zero, int dim, char* son_str) {
 			
 			//Check if non burning tree will catch on fire
 			else if (mat_gen_zero[i][j] == 'T') {
-				if (check_four_sides(dim, mat_gen_zero, next_gen_matrix, i, j, 'F') >= 1)
+				if (check_four_sides(dim, mat_gen_zero, i, j, 'F') >= 1)
 					next_gen_matrix[i][j] = 'F';
 				else
 					next_gen_matrix[i][j] = 'T';
@@ -87,8 +87,8 @@ char** evaluate_generation(char** mat_gen_zero, int dim, char* son_str) {
 			
 			//check if tree will grow on ground
 			else if (mat_gen_zero[i][j] == 'G') {
-				if ((check_four_sides(dim, mat_gen_zero, next_gen_matrix, i, j, 'T') +
-					check_four_corners(dim, mat_gen_zero, next_gen_matrix, i, j, 'T')) >= 2)
+				if ((check_four_sides(dim, mat_gen_zero, i, j, 'T') +
+					check_four_corners(dim, mat_gen_zero, i, j, 'T')) >= 2)
 					next_gen_matrix[i][j] = 'T';
 				else
 					next_gen_matrix[i][j] = 'G';

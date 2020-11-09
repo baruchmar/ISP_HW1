@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
 	son_str = (char*)malloc((dim * dim + 2) * sizeof(char));
 
 	// Allocating memory for the matrix we will fill from file
-	char** mat_gen_zero;
+	char** mat_gen_zero = NULL;
 	mat_gen_zero = make_matrix(dim, p_input_file, son_str);
 	
 	//closing input file since we are done with it
