@@ -25,7 +25,7 @@ next_gen
 * j - the column index of the matrix element
 * character_of_interest - the character we compares the neighbour to for counter
 */
-int check_four_sides(int dim, char** mat_gen_zero, int i, int j, char character_of_interest);
+int check_four_sides(const int dim, const char** mat_gen_zero, const int i, const int j, const char character_of_interest);
 
 /*
 * check_four_corners accepts 3 variables of type 'int', 1 variable that is an array of pointers (matrix)
@@ -40,7 +40,7 @@ int check_four_sides(int dim, char** mat_gen_zero, int i, int j, char character_
 * j - the column index of the matrix element
 * character_of_interest - the character we compares the neighbour to for counter
 */
-int check_four_corners(int dim, char** mat_gen_zero, int i, int j, char character_of_interest);
+int check_four_corners(const int dim, const char** mat_gen_zero, const int i, const int j, const char character_of_interest);
 
 /*
 * evaluate_generation accepts 1 variables of type 'int', 1 variable that is an array of pointers (matrix)
@@ -54,6 +54,6 @@ int check_four_corners(int dim, char** mat_gen_zero, int i, int j, char characte
 * dim - the dimension of the forest
 * son_str - the string of the forest to be sent to Son.exe
 */
-char** evaluate_generation(char** mat_gen_zero, int dim, char* son_str);
+char** evaluate_generation(const char** mat_gen_zero,const int dim, char* son_str);
 #endif 
 

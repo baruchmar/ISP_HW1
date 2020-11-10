@@ -11,7 +11,7 @@
   Returns:    matrix: char**
               a dimXdim matrix, with uninitialized values.
 */
-char** malloc_matrix(int dim);
+char** malloc_matrix(const int dim);
 
 /*memory_error:
   This function prints out an error if memory allocation was unsuccessful
@@ -30,7 +30,7 @@ void memory_error();
   Returns:    matrix: char**
               a dimXdim matrix, with initialized values.
 */
-char** make_matrix(const int dim, FILE* p_input_file, char* son_str); 
+char** make_matrix(const int dim, FILE* p_input_file,char* son_str); 
 /*free_mat:
   This function frees memory that was allocated to matrix.
   Parameters: dim: int 

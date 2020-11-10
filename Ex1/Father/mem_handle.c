@@ -5,10 +5,10 @@
 
 #include "mem_handle.h"
 
-// TODO:documentation!!
-char** malloc_matrix(int dim) {
+
+char** malloc_matrix(const int dim) {
 	int i;
-	char** matrix = (char*)malloc(dim * sizeof(char*));//TODO Free memory
+	char** matrix = (char**)malloc(dim * sizeof(char*));
 	if (NULL == matrix)
 		memory_error();
 
@@ -23,7 +23,7 @@ void memory_error() {
 	printf("There was a problem allocating the memory for the matrix!!\n");
 	exit(1);
 }
-char** make_matrix(const int dim, FILE* p_input_file, char* son_str) {
+char** make_matrix(const int dim, FILE* p_input_file,char* son_str) {
 	int i, j, m = 0;
 	char** matrix;
 	matrix = malloc_matrix(dim);
@@ -41,7 +41,7 @@ char** make_matrix(const int dim, FILE* p_input_file, char* son_str) {
 	son_str[m] = '\0';
 	return matrix;
 }
-void free_mat(char** mat,const int dim) {
+void free_mat(char** mat, const int dim) {
 	int i;
 	for (i = 0; i < dim; i++){
 		free(mat[i]);

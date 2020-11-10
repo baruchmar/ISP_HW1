@@ -14,9 +14,9 @@ create_process
 #include <stdio.h>
 
 /*
-* create_process_simple_main accepts one variable of type 'string'. 
+* create_process_simple_main accepts one variable of type 'char*'. 
 * It sets up all the parameters for creating a seperate running process 
-* and returns the exitcode of Son.exe
+* and returns the exitcode of Son.exe.It then closes all the handles.
 * (Based off of files from Recitation 3)
 *
 * Parameters:

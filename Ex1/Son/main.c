@@ -2,15 +2,15 @@
 /*
 Baruch Margolis - 336451182
 Omer Badur - 313418659
-HW1
-Son
-*/
+Ex1
+Son - This process receives 'son_str' from Father.exe and returns the number of trees burnt in the forest.
+
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
 
 
 /* Library includes: */
 #include <stdio.h> /* for printf */
-#include <stdlib.h> /* for exit() */
+#include <stdlib.h> 
 
 int main(int argc, char** argv) {
 	int c = 0, count = 0;

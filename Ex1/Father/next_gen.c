@@ -12,7 +12,7 @@ next_gen
 #include "mem_handle.h"
 
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
-int check_four_sides(int dim, char** mat_gen_zero, int i, int j, char character_of_interest) {
+int check_four_sides(const int dim, const char** mat_gen_zero,const int i,const int j, const char character_of_interest) {
 	
 	int count = 0;
 	
@@ -35,7 +35,7 @@ int check_four_sides(int dim, char** mat_gen_zero, int i, int j, char character_
 }
 
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
-int check_four_corners(int dim, char** mat_gen_zero, int i, int j, char character_of_interest) {
+int check_four_corners(const int dim, const char** mat_gen_zero, const int i, const int j, const char character_of_interest) {
 	
 	int count = 0;
 	
@@ -57,7 +57,7 @@ int check_four_corners(int dim, char** mat_gen_zero, int i, int j, char characte
 	return count;
 }
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
-char** evaluate_generation(char** mat_gen_zero, int dim, char* son_str) {
+char** evaluate_generation(const char** mat_gen_zero, const int dim, char* son_str) {
 	
 	int i, j, m = 0;
 	char** next_gen_matrix;

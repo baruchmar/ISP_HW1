@@ -2,13 +2,15 @@
 /*
 Baruch Margolis - 336451182
 Omer Badur - 313418659
-HW1
-Father
+Ex1
+Father - Initializes gen_zero of forest, passes 'son_str'(a string that contians all the current gen information in a char* form)
+		to Son.exe in order to get the number of trees burt. This process goes on as long as specified in the input_file.
+		the output file is also maintained by Father.exe.
 */
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
 
 /* Library includes: */
-#include <stdio.h> /* for printf */
+#include <stdio.h> 
 #include <stdlib.h> 
 #include <malloc.h>
 #include <string.h>
@@ -19,13 +21,14 @@ Father
 #include "next_gen.h"
 #include "mem_handle.h"
 
+#define MAX_NUMBER_OF_DIGITS 10
 
 int main(int argc, char** argv) {
 
 	FILE* p_input_file, * p_output_file;
-	long dim = 0, gen = 0;
-	int i, burnt_trees =0;
-	char line[15];
+	int dim = 0, gen = 0;
+	int i, burnt_trees = 0;
+	char line[MAX_NUMBER_OF_DIGITS + 1]; // adding one for \0.
 
 	// Checking that we are given an input file in the command line
 	if (argc <= 1) {
@@ -40,11 +43,11 @@ int main(int argc, char** argv) {
 	
 	// Getting the dimension of the forest from file
 	fgets(line, 15, p_input_file);
-	dim = strtol(line, NULL, 10);
+	dim = (int)strtol(line, NULL, 10);
 
 	// Getting the amount of geneartion to run from file
 	fgets(line, 15, p_input_file);
-	gen = strtol(line, NULL, 10);
+	gen = (int)strtol(line, NULL, 10);
 
 	// Allocating memory for string to be sent to Son.exe
 	char* son_str;
